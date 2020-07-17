@@ -17,6 +17,16 @@
     }
     &__slider {
         max-width: 560px;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 560px;
+            height: 276px;
+            border: 4px solid #fff;
+            top: -15px;
+            right: -17px;
+
+        }
     }
 
     &__slider-text {
@@ -29,5 +39,27 @@
         bottom: 50px;
         z-index: 5;
         left: -250px;
+    }
+}
+.slider-btn{
+    padding: 16px 26px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    cursor: pointer;bottom: -45px;
+    z-index: 5;
+    outline: none;
+    svg{
+        stroke: #000;
+    }
+    &__left {
+        right: 60px;
+    }
+    &.slick-disabled {
+        background-color: #000;
+        svg{
+            stroke: #fff;
+        }
     }
 }
